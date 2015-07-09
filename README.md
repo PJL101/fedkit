@@ -26,18 +26,18 @@ fedkit is a fast, stable, and well tested frontend development workflow, contain
 * Responsive IE8 support,
 * All frontend dependences use bower for easy management.
 
-Use fedkit as a base and tailor to your specific needs. Comments, sugggestions & pull requests are always welcome. See the [issues list](https://github.com/PJL101/fedkit-assemble/issues) for more information about future enchancements and changes.
+Use fedkit as a base and tailor to your specific needs. Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/PJL101/fedkit-assemble/issues) for more information about future enhancements and changes.
 
 ## Variants
 
 There are several variants of fedkit either in development or available now. They have the base workflow with a site generator included. The current variants available are:
 
-* fedkit-assemble (Good for quick website prototyping) - [fedkit-assemble](https://github.com/PJL101/fedkit-assemble)
-* fedkit-hugo (Designed for a static website, with or without a blog) - [fedkit-hugo](https://github.com/PJL101/fedkit-hugo)
+* [fedkit-assemble](https://github.com/PJL101/fedkit-assemble) - Good for quick website prototyping,
+* [fedkit-hugo](https://github.com/PJL101/fedkit-hugo) - Designed for a static website, with or without a blog.
 
 ## Install
 
-Either, download the latest stable release from [GitHub](https://github.com/PJL101/fedkit-assemble/releases) or clone the git repository on the master branch — `git clone https://github.com/PJL101/fedkit-assemble.git`.
+Either, download the latest stable release from [GitHub](https://github.com/PJL101/fedkit/releases) or clone the git repository on the master branch — `git clone https://github.com/PJL101/fedkit.git`.
 
 Once this has been done:
 
@@ -59,5 +59,4 @@ Once this has been done:
 ## Known Issues
 
 * Documentation is in progress,
-* Grid and site examples need to be improved,
 * No Windows testing.
