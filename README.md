@@ -12,6 +12,8 @@ Version: 0.1.0
 
 -
 
+This kit is designed to go hand in hand with a static site generator but can happily work standalone. See variants for more information.
+
 fedkit is a fast, stable, and well tested frontend development workflow, containing:
 
 * Grunt 0.4,
@@ -30,7 +32,7 @@ Use fedkit as a base and tailor to your specific needs. Comments, suggestions & 
 
 ## Variants
 
-There are several variants of fedkit either in development or available now. They have the base workflow with a site generator included. The current variants available are:
+There are several variants of fedkit either in development or available now. They have the base frontend workflow with a site generator included. The current variants are:
 
 * [fedkit-assemble](https://github.com/PJL101/fedkit-assemble) - Good for quick website prototyping,
 * [fedkit-hugo](https://github.com/PJL101/fedkit-hugo) - Designed for a static website, with or without a blog.
