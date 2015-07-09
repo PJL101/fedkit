@@ -6,7 +6,7 @@ Version: 0.1.0
   #info=devDependencies)
 
 * Author: [Phil Lennon](http://iampjl.co.uk)
-* Source: [github.com/PJL101/fedkit](http://github.com/PJL101/fedkit-assemble)
+* Source: [github.com/PJL101/fedkit](http://github.com/PJL101/fedkit)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
 * Email: [enquiry@iampjl.co.uk](mailto:enquiry@iampjl.co.uk)
 
@@ -26,7 +26,7 @@ fedkit is a fast, stable, and well tested frontend development workflow, contain
 * Responsive IE8 support,
 * All frontend dependences use bower for easy management.
 
-Use fedkit as a base and tailor to your specific needs. Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/PJL101/fedkit-assemble/issues) for more information about future enhancements and changes.
+Use fedkit as a base and tailor to your specific needs. Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/PJL101/fedkit/issues) for more information about future enhancements and changes.
 
 ## Variants
 
