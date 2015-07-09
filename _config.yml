@@ -1,0 +1,9 @@
+# File Locations
+# =============================================
+
+# Build paths
+gruntFile:      Gruntfile.js
+src:            src
+srcAssets:      <%= site.src %>/assets
+dist:           _dist
+distAssets:     <%= site.dist %>/assets
