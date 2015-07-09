@@ -282,24 +282,6 @@ module.exports = function(grunt) {
       },
     },
 
-    // Start server & watch
-    browserSync: {
-      dev: {
-        bsFiles: {
-          src: [
-            '<%= site.distAssets %>/css/*.css',
-            '<%= site.distAssets %>/js/*.js',
-            '<%= site.distAssets %>/img/**/*.{png,jpg,gif}',
-            '<%= site.dist %>/*.html'
-          ]
-        },
-        options: {
-          server: '<%= site.dist %>',
-          watchTask: true
-        }
-      }
-    },
-
     // Bump task
     // Use by running: 'grunt bump:patch', 'grunt bump:minor', 'grunt bump:major'
     bump: {
@@ -335,7 +317,6 @@ module.exports = function(grunt) {
     'imagemin',
     'copy:fonts',
     'copy:files',
-    'browserSync',
     'watch'
   ]);
 

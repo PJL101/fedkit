@@ -23,7 +23,6 @@ fedkit is a fast, stable, and well tested frontend development workflow, contain
 * Imagemin,
 * JSHint,
 * HTMLmin,
-* BrowserSync 2.6,
 * Responsive IE8 support,
 * All frontend dependences use bower for easy management.
 
@@ -56,10 +55,6 @@ Once this has been done:
 ## Bower
 
 [Bower](http://bower.io) is used to automatically pull in frontend dependences such as jQuery. The workflow takes the relevant files and integrates them into the relevant folders ready for use. Please see bower.json for an example on how this works.
-
-## BrowserSync
-
-With BrowserSync, you can view the website on multiple devices and actions are sent to all of them at the same time. See the UI link after running the grunt task for more information.
 
 ## Known Issues
 
