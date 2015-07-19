@@ -61,6 +61,17 @@ module.exports = function(grunt) {
       }
     },
 
+    // Csscomb
+    csscomb: {
+      src: {
+        expand: true,
+        cwd: '<%= site.srcAssets %>/scss/partials/',
+        src: ['**/*.scss'],
+        dest: '<%= site.srcAssets %>/scss/partials/',
+        ext: '.scss'
+      }
+    },
+
     // Compile SASS
     sass: {
       dev: {
@@ -116,7 +127,7 @@ module.exports = function(grunt) {
           processors: [
             require('postcss-color-rgba-fallback')(), // Add hex colour fallback
             require('postcss-opacity'), // IE8 opacity fallback
-            require('postcss-will-change'), // Will change fallback                                
+            require('postcss-will-change'), // Will change fallback
             require('autoprefixer-core')(), // add vendor prefixes
             require('css-mqpacker')(), // Combine media queries
             require('cssnano')(), // minify stylesheet
@@ -323,6 +334,7 @@ module.exports = function(grunt) {
     'clean:dist',
     'shell:bower',
     'newer:copy:bower',
+    'csscomb',
     'sass:dev',
     'postcss:dev',
     'px_to_rem:dev',
@@ -339,6 +351,7 @@ module.exports = function(grunt) {
     'clean:dist',
     'shell:bower',
     'newer:copy:bower',
+    'csscomb',    
     'sass:prd',
     'postcss:prd',
     'px_to_rem:prd',

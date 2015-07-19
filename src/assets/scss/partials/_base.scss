@@ -10,11 +10,12 @@ html {
 }
 
 html {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
   font-size: 100%;
+
+  -webkit-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -35,7 +36,7 @@ img {
 }
 
 ::selection {
-  background: #a8d1ff;
+  background: #A8D1FF;
   text-shadow: none;
 }
 
@@ -45,7 +46,7 @@ button {
 }
 
 .hide {
-    display: none !important;
+  display: none !important;
 }
 
 /*
@@ -54,14 +55,17 @@ button {
  */
 
 .hide-screen {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
 }
 
 /*
@@ -72,10 +76,12 @@ button {
 
 .hide-screen.focusable:active,
 .hide-screen.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+  position: static;
+
+  overflow: visible;
+  clip: auto;
+
+  width: auto;
+  height: auto;
+  margin: 0;
 }
