@@ -95,6 +95,29 @@ module.exports = function(grunt) {
       }
     },
 
+    // Postcss functions
+    postcss: {
+      dev: {
+        options: {
+          map: true,
+          processors: [
+            require('autoprefixer-core')(), // add vendor prefixes
+          ],
+        },
+        src: '<%= site.distAssets %>/css/**/*.css',
+      },
+      prd: {
+        options: {
+          map: false,
+          processors: [
+            require('autoprefixer-core')(), // add vendor prefixes
+            require('cssnano')() // minify the result
+          ],
+        },
+        src: '<%= site.distAssets %>/css/**/*.css',
+      }
+    },
+
     // Change to rem units
     px_to_rem: {
       dev: {
@@ -125,45 +148,6 @@ module.exports = function(grunt) {
           ignore: ['content']
         }
       },
-    },
-
-    // Autoprefix CSS
-    autoprefixer: {
-      dev: {
-        options: {
-          map: true
-        },
-        files: [{
-          expand: true,
-          flatten: true,
-          src: '<%= site.distAssets %>/css/*.css',
-          dest: '<%= site.distAssets %>/css/'
-        }],
-      },
-      prd: {
-        options: {
-          map: false
-        },
-        files: [{
-          expand: true,
-          flatten: true,
-          src: '<%= site.distAssets %>/css/*.css',
-          dest: '<%= site.distAssets %>/css/'
-        }],
-      }
-    },
-
-    // Minify CSS
-    cssmin: {
-      prd: {
-        files: [{
-          expand: true,
-          cwd: '<%= site.distAssets %>/css',
-          src: ['*.css', '!*.min.css'],
-          dest: '<%= site.distAssets %>/css',
-          ext: '.css'
-        }]
-      }
     },
 
     // JSHint modules
@@ -288,7 +272,7 @@ module.exports = function(grunt) {
       },
       scss: {
         files:['<%= site.srcAssets %>/scss/**/*.scss'],
-        tasks:['sass:dev', 'px_to_rem:dev', 'autoprefixer:dev'],
+        tasks:['sass:dev', 'postcss:dev', 'px_to_rem:dev'],
       },
       img: {
         files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif}'],
@@ -332,8 +316,8 @@ module.exports = function(grunt) {
     'shell:bower',
     'newer:copy:bower',
     'sass:dev',
+    'postcss:dev',
     'px_to_rem:dev',
-    'autoprefixer:dev',
     'jshint',
     'modernizr',
     'uglify:dev',
@@ -348,8 +332,7 @@ module.exports = function(grunt) {
     'shell:bower',
     'newer:copy:bower',
     'sass:prd',
-    'autoprefixer:prd',
-    'cssmin',
+    'postcss:prd',
     'px_to_rem:prd',
     'jshint',
     'modernizr',
