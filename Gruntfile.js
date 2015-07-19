@@ -103,6 +103,7 @@ module.exports = function(grunt) {
           processors: [
             require('postcss-color-rgba-fallback')(), // Add hex colour fallback
             require('autoprefixer-core')(), // add vendor prefixes
+            require('css-mqpacker')(), // Combine media queries
           ],
         },
         src: '<%= site.distAssets %>/css/**/*.css',
@@ -111,9 +112,10 @@ module.exports = function(grunt) {
         options: {
           map: false,
           processors: [
-            require('postcss-color-rgba-fallback')(), // Add hex colour fallback            
+            require('postcss-color-rgba-fallback')(), // Add hex colour fallback
             require('autoprefixer-core')(), // add vendor prefixes
-            require('cssnano')() // minify stylesheet
+            require('css-mqpacker')(), // Combine media queries
+            require('cssnano')(), // minify stylesheet
           ],
         },
         src: '<%= site.distAssets %>/css/**/*.css',
