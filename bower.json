@@ -24,6 +24,9 @@
     "normalize-scss": "~3.0.3",
     "jquery": "1.x"
   },
+  "devDependencies": {
+    "tota11y": "~0.0.6"    
+  },
   "install": {
     "base": "bower_filtered",
     "path": {
