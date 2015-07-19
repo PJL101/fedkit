@@ -20,10 +20,12 @@ fedkit is a fast, stable, and well tested frontend development workflow, contain
 * Libsass 3.2,
 * Susy 2.2,
 * SASS-MQ 3,
+* PostCSS with Autoprefixer, RGBA, Opacity & Will change fallback and media query packer.
+* CSS Comb,
 * CSS PX to REM,
-* Autoprefixer 5,
 * Imagemin,
 * JSHint,
+* Automatic Custom Modernizr Build,
 * HTMLmin,
 * Responsive IE8 support,
 * All frontend dependences use bower for easy management.
@@ -50,6 +52,7 @@ Once this has been done:
 * run `grunt`.
 
 ## How to use
+
 * `grunt` - Build website, watch for changes & start server,
 * `grunt prd` - Build minified website,
 * `grunt reset` - Delete generated website and downloaded bower files.
