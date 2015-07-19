@@ -25,7 +25,7 @@
     "jquery": "1.x"
   },
   "devDependencies": {
-    "tota11y": "~0.0.6"    
+    "tota11y": "~0.0.6"
   },
   "install": {
     "base": "bower_filtered",
@@ -39,8 +39,8 @@
       "woff": "fonts/{name}",
       "woff2": "fonts/{name}"
     },
+    "ignore": [ "modernizr" ],
     "sources": {
-      "modernizr": "bower_components/modernizr/modernizr.js",
       "susy": "bower_components/susy/sass/**"
     }
   }

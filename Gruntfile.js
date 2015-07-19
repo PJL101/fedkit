@@ -181,6 +181,28 @@ module.exports = function(grunt) {
       ]
     },
 
+    // Modernizr
+    modernizr: {
+      dist: {
+        devFile: 'bower_components/modernizr/modernizr.js',
+        outputFile: '<%= site.srcAssets %>/js/vendor/bower/modernizr-custom.js',
+        extra: {
+          "shiv" : false,
+          "printshiv": false,
+          "load": false,
+          "mq": false,
+          "cssclasses": true
+        },
+        uglify: false,
+        files: {
+          src: [
+            '<%= site.srcAssets %>/js/modules/**/*.js',
+            '<%= site.distAssets %>/css/**/*.css'
+          ]
+        }
+      }
+    },
+
     // Uglify Javascript
     uglify: {
       dev: {
@@ -313,6 +335,7 @@ module.exports = function(grunt) {
     'px_to_rem:dev',
     'autoprefixer:dev',
     'jshint',
+    'modernizr',
     'uglify:dev',
     'imagemin',
     'copy:fonts',
@@ -329,6 +352,7 @@ module.exports = function(grunt) {
     'cssmin',
     'px_to_rem:prd',
     'jshint',
+    'modernizr',
     'uglify:prd',
     'imagemin',
     'htmlmin:prd',
