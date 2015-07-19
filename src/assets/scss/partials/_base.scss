@@ -39,6 +39,11 @@ img {
   text-shadow: none;
 }
 
+a,
+button {
+  touch-action: manipulation;
+}
+
 .hide {
     display: none !important;
 }
