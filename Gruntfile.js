@@ -101,6 +101,7 @@ module.exports = function(grunt) {
         options: {
           map: true,
           processors: [
+            require('postcss-color-rgba-fallback')(), // Add hex colour fallback
             require('autoprefixer-core')(), // add vendor prefixes
           ],
         },
@@ -110,8 +111,9 @@ module.exports = function(grunt) {
         options: {
           map: false,
           processors: [
+            require('postcss-color-rgba-fallback')(), // Add hex colour fallback            
             require('autoprefixer-core')(), // add vendor prefixes
-            require('cssnano')() // minify the result
+            require('cssnano')() // minify stylesheet
           ],
         },
         src: '<%= site.distAssets %>/css/**/*.css',

@@ -13,6 +13,7 @@ body {
 .h1 {
   font-size: 32px;
   line-height: 1.1;
+  background-color: $brand-b;
 
   @include mq($from: tablet) {
     font-size: 45px;
