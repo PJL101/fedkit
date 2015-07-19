@@ -103,6 +103,7 @@ module.exports = function(grunt) {
           processors: [
             require('postcss-color-rgba-fallback')(), // Add hex colour fallback
             require('postcss-opacity'), // IE8 opacity fallback
+            require('postcss-will-change'), // Will change fallback
             require('autoprefixer-core')(), // add vendor prefixes
             require('css-mqpacker')(), // Combine media queries
           ],
@@ -114,7 +115,8 @@ module.exports = function(grunt) {
           map: false,
           processors: [
             require('postcss-color-rgba-fallback')(), // Add hex colour fallback
-            require('postcss-opacity'), // IE8 opacity fallback                  
+            require('postcss-opacity'), // IE8 opacity fallback
+            require('postcss-will-change'), // Will change fallback                                
             require('autoprefixer-core')(), // add vendor prefixes
             require('css-mqpacker')(), // Combine media queries
             require('cssnano')(), // minify stylesheet
