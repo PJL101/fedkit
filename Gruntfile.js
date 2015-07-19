@@ -63,11 +63,18 @@ module.exports = function(grunt) {
 
     // Csscomb
     csscomb: {
-      src: {
+      partials: {
         expand: true,
         cwd: '<%= site.srcAssets %>/scss/partials/',
         src: ['**/*.scss'],
         dest: '<%= site.srcAssets %>/scss/partials/',
+        ext: '.scss'
+      },
+      modules: {
+        expand: true,
+        cwd: '<%= site.srcAssets %>/scss/modules/',
+        src: ['**/*.scss'],
+        dest: '<%= site.srcAssets %>/scss/modules/',
         ext: '.scss'
       }
     },
@@ -351,7 +358,7 @@ module.exports = function(grunt) {
     'clean:dist',
     'shell:bower',
     'newer:copy:bower',
-    'csscomb',    
+    'csscomb',
     'sass:prd',
     'postcss:prd',
     'px_to_rem:prd',
