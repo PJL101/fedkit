@@ -20,10 +20,10 @@ fedkit is a fast, stable, and well tested frontend development workflow, contain
 * Libsass 3.2,
 * Susy 2.2,
 * SASS-MQ 3,
-* PostCSS with Autoprefixer, will change fallback and media query packer.
+* PostCSS with Autoprefixer, will change fallback and media query packer,
 * CSS Comb,
 * CSS PX to REM,
-* Critical CSS
+* Critical CSS,
 * Imagemin,
 * JSHint,
 * Automatic custom Modernizr build,
