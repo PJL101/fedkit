@@ -15,6 +15,9 @@ Thumbs.db
 *bower_components/
 *bower_filtered/
 *_dist/
+src/assets/scss/vendor/bower
+src/assets/js/vendor/bower
+src/assets/js/head/bower
 npm-debug.log
 
 # Development #
@@ -24,5 +27,3 @@ npm-debug.log
 
 # Project Specific #
 ######################
-src/assets/scss/vendor/bower
-src/assets/js/vendor/bower

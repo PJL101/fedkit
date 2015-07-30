@@ -32,8 +32,16 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'bower_filtered',
-          src: ['**/*'],
+          src: ['**/*', '!js/head/**/*'],
           dest: '<%= site.srcAssets %>'
+        }]
+      },
+      bowerHead: {
+        files: [{
+          expand: true,
+          cwd: 'bower_filtered/js/head',
+          src: ['**/*'],
+          dest: '<%= site.srcAssets %>/js/head/bower'
         }]
       },
       fonts: {
@@ -340,7 +348,8 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', [
     'clean',
     'shell:bower',
-    'newer:copy:bower',
+    'copy:bower',
+    'copy:bowerHead',
     'csscomb',
     'sass:dev',
     'postcss:dev',
@@ -357,7 +366,8 @@ module.exports = function(grunt) {
   grunt.registerTask('prd', [
     'clean',
     'shell:bower',
-    'newer:copy:bower',
+    'copy:bower',
+    'copy:bowerHead',
     'csscomb',
     'sass:prd',
     'postcss:prd',
