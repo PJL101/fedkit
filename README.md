@@ -41,9 +41,7 @@ There are several variants of fedkit either in development or available now. The
 
 ## Install
 
-Either, download the latest stable release from [GitHub](https://github.com/PJL101/fedkit/releases) or clone the git repository on the master branch — `git clone https://github.com/PJL101/fedkit.git`.
-
-Once this has been done:
+Download the latest stable release from [GitHub](https://github.com/PJL101/fedkit/releases). Once this has been done:
 
 * Install Node 0.12 or io.js 2.0 (Node 0.10.x is not supported but may work),
 * run `npm install grunt-cli -g && npm install bower -g && npm install bower-installer -g`,
