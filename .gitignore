@@ -17,7 +17,6 @@ Thumbs.db
 *_dist/
 src/assets/scss/vendor/bower
 src/assets/js/vendor/bower
-src/assets/js/head/bower
 npm-debug.log
 
 # Development #
