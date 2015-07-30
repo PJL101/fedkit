@@ -1,5 +1,5 @@
 # fedkit
-Version: 0.2.2
+Version: 0.2.3
 
 [![Build Status](https://travis-ci.org/PJL101/fedkit.svg?branch=master)](https://travis-ci.org/PJL101/fedkit)
 [![devDependency Status](https://david-dm.org/PJL101/fedkit/dev-status.svg)](https://david-dm.org/PJL101/fedkit
