@@ -294,8 +294,7 @@ module.exports = function(grunt) {
           ],
           minify: false,
           width: 1300,
-          height: 900,
-          extract: true
+          height: 900
         },
         files: [{
           expand: true,
@@ -312,8 +311,7 @@ module.exports = function(grunt) {
           ],
           minify: true,
           width: 1300,
-          height: 900,
-          extract: true
+          height: 900
         },
         files: [{
           expand: true,
