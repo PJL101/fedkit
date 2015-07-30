@@ -119,8 +119,6 @@ module.exports = function(grunt) {
         options: {
           map: true,
           processors: [
-            require('postcss-color-rgba-fallback')(), // Add hex colour fallback
-            require('postcss-opacity'), // IE8 opacity fallback
             require('postcss-will-change'), // Will change fallback
             require('autoprefixer-core')(), // add vendor prefixes
             require('css-mqpacker')(), // Combine media queries
@@ -132,8 +130,6 @@ module.exports = function(grunt) {
         options: {
           map: false,
           processors: [
-            require('postcss-color-rgba-fallback')(), // Add hex colour fallback
-            require('postcss-opacity'), // IE8 opacity fallback
             require('postcss-will-change'), // Will change fallback
             require('autoprefixer-core')(), // add vendor prefixes
             require('css-mqpacker')(), // Combine media queries
@@ -154,8 +150,8 @@ module.exports = function(grunt) {
           dest: '<%= site.distAssets %>/css/'
         }],
         options: {
-          fallback: true,
-          fallback_existing_rem: true,
+          fallback: false,
+          fallback_existing_rem: false,
           map: true,
           ignore: ['content']
         }
@@ -168,8 +164,8 @@ module.exports = function(grunt) {
           dest: '<%= site.distAssets %>/css/'
         }],
         options: {
-          fallback: true,
-          fallback_existing_rem: true,
+          fallback: false,
+          fallback_existing_rem: false,
           map: false,
           ignore: ['content']
         }
@@ -226,7 +222,6 @@ module.exports = function(grunt) {
         },
         files: {
           '<%= site.distAssets %>/js/head.js': ['<%= site.srcAssets %>/js/head/**/*.js'],
-          '<%= site.distAssets %>/js/head-oldie.js': ['<%= site.srcAssets %>/js/head-oldie/**/*.js'],
           '<%= site.distAssets %>/js/site.js': [
             '<%= site.srcAssets %>/js/global.js',
             '<%= site.srcAssets %>/js/vendor/**/*.js',
@@ -247,7 +242,6 @@ module.exports = function(grunt) {
         },
         files: {
           '<%= site.distAssets %>/js/head.js': ['<%= site.srcAssets %>/js/head/**/*.js'],
-          '<%= site.distAssets %>/js/head-oldie.js': ['<%= site.srcAssets %>/js/head-oldie/**/*.js'],
           '<%= site.distAssets %>/js/site.js': [
             '<%= site.srcAssets %>/js/global.js',
             '<%= site.srcAssets %>/js/vendor/**/*.js',

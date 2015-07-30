@@ -20,14 +20,14 @@ fedkit is a fast, stable, and well tested frontend development workflow, contain
 * Libsass 3.2,
 * Susy 2.2,
 * SASS-MQ 3,
-* PostCSS with Autoprefixer, RGBA, Opacity & Will change fallback and media query packer.
+* PostCSS with Autoprefixer, will change fallback and media query packer.
 * CSS Comb,
 * CSS PX to REM,
+* Critical CSS
 * Imagemin,
 * JSHint,
-* Automatic Custom Modernizr Build,
+* Automatic custom Modernizr build,
 * HTMLmin,
-* Responsive IE8 support,
 * All frontend dependences use bower for easy management.
 
 Use fedkit as a base and tailor to your specific needs. Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/PJL101/fedkit/issues) for more information about future enhancements and changes.
