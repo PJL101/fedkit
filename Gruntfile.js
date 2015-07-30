@@ -32,16 +32,8 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'bower_filtered',
-          src: ['**/*', '!js/head/**/*'],
-          dest: '<%= site.srcAssets %>'
-        }]
-      },
-      bowerHead: {
-        files: [{
-          expand: true,
-          cwd: 'bower_filtered/js/head',
           src: ['**/*'],
-          dest: '<%= site.srcAssets %>/js/head/bower'
+          dest: '<%= site.srcAssets %>'
         }]
       },
       fonts: {
@@ -298,6 +290,46 @@ module.exports = function(grunt) {
       }
     },
 
+    // Critical CSS
+    critical: {
+      dev: {
+        options: {
+          base: './',
+          css: [
+            '<%= site.distAssets %>/css/site.css'
+          ],
+          minify: false,
+          width: 1300,
+          height: 900,
+          extract: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= site.dist %>',
+          src: ['**/*.html'],
+          dest: '<%= site.dist %>'
+        }]
+      },
+      prd: {
+        options: {
+          base: './',
+          css: [
+            '<%= site.distAssets %>/css/site.css'
+          ],
+          minify: true,
+          width: 1300,
+          height: 900,
+          extract: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= site.dist %>',
+          src: ['**/*.html'],
+          dest: '<%= site.dist %>'
+        }]
+      }
+    },
+
     // Watch for changes
     watch: {
       js: {
@@ -349,7 +381,6 @@ module.exports = function(grunt) {
     'clean',
     'shell:bower',
     'copy:bower',
-    'copy:bowerHead',
     'csscomb',
     'sass:dev',
     'postcss:dev',
@@ -360,6 +391,7 @@ module.exports = function(grunt) {
     'imagemin',
     'copy:fonts',
     'copy:files',
+    'critical:dev',
     'watch'
   ]);
 
@@ -367,7 +399,6 @@ module.exports = function(grunt) {
     'clean',
     'shell:bower',
     'copy:bower',
-    'copy:bowerHead',
     'csscomb',
     'sass:prd',
     'postcss:prd',
@@ -376,9 +407,10 @@ module.exports = function(grunt) {
     'modernizr',
     'uglify:prd',
     'imagemin',
-    'htmlmin:prd',
     'copy:fonts',
     'copy:files',
+    'critical:prd',
+    'htmlmin:prd',
   ]);
 
   grunt.registerTask('default', 'dev');
