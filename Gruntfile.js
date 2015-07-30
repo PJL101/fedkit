@@ -338,7 +338,7 @@ module.exports = function(grunt) {
 
   // Tasks
   grunt.registerTask('dev', [
-    'clean:dist',
+    'clean',
     'shell:bower',
     'newer:copy:bower',
     'csscomb',
@@ -355,7 +355,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('prd', [
-    'clean:dist',
+    'clean',
     'shell:bower',
     'newer:copy:bower',
     'csscomb',
