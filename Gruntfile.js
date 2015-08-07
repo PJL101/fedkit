@@ -257,12 +257,15 @@ module.exports = function(grunt) {
     imagemin: {
       dynamic: {
         options: {
+          optimizationLevel: 3,
+          svgoPlugins: [{
 
+          }]
         },
         files: [{
           expand: true,
           cwd: '<%= site.srcAssets %>/img/',
-          src: ['**/*.{png,jpg,gif}'],
+          src: ['**/*.{png,jpg,gif,svg}'],
           dest: '<%= site.distAssets %>/img/'
         }]
       }
@@ -333,7 +336,7 @@ module.exports = function(grunt) {
         tasks:['csscomb', 'sass:dev', 'postcss:dev', 'px_to_rem:dev', 'critical:dev'],
       },
       img: {
-        files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif}'],
+        files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif,svg}'],
         tasks: ['newer:imagemin'],
       },
       fonts: {
