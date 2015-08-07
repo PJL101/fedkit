@@ -202,7 +202,7 @@ module.exports = function(grunt) {
         uglify: false,
         files: {
           src: [
-            '<%= site.srcAssets %>/js/**/*.js',            
+            '<%= site.srcAssets %>/js/**/*.js',
             '<%= site.distAssets %>/css/**/*.css'
           ]
         }
@@ -330,7 +330,7 @@ module.exports = function(grunt) {
       },
       scss: {
         files:['<%= site.srcAssets %>/scss/**/*.scss'],
-        tasks:['sass:dev', 'postcss:dev', 'px_to_rem:dev'],
+        tasks:['csscomb', 'sass:dev', 'postcss:dev', 'px_to_rem:dev', 'critical:dev'],
       },
       img: {
         files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif}'],
