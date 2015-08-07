@@ -271,6 +271,20 @@ module.exports = function(grunt) {
       }
     },
 
+    // Grunticon
+    grunticon: {
+      prd: {
+        files: [{
+            expand: true,
+            cwd: '<%= site.distAssets %>/img/icons/',
+            src: ['*.svg', '*.png'],
+            dest: "_grunticon"
+        }],
+        options: {
+        }
+      }
+    },
+
     // HTML minification
     htmlmin: {
       prd: {
@@ -384,6 +398,7 @@ module.exports = function(grunt) {
     'modernizr',
     'uglify:dev',
     'imagemin',
+    'grunticon:prd',
     'copy:fonts',
     'copy:files',
     'critical:dev',
@@ -402,6 +417,7 @@ module.exports = function(grunt) {
     'modernizr',
     'uglify:prd',
     'imagemin',
+    'grunticon:prd',
     'copy:fonts',
     'copy:files',
     'critical:prd',
