@@ -202,7 +202,7 @@ module.exports = function(grunt) {
         uglify: false,
         files: {
           src: [
-            '<%= site.srcAssets %>/js/modules/**/*.js',
+            '<%= site.srcAssets %>/js/**/*.js',            
             '<%= site.distAssets %>/css/**/*.css'
           ]
         }
