@@ -14,7 +14,7 @@ Version: 0.3.0
 
 This kit is designed to go hand in hand with a static site generator but can happily work standalone. See variants for more information.
 
-fedkit is a fast, stable, and well tested frontend development workflow, containing:
+fedkit is a fast, stable, well tested and opinionated frontend development workflow, containing:
 
 * Grunt 0.4,
 * Libsass 3.2,
@@ -25,6 +25,7 @@ fedkit is a fast, stable, and well tested frontend development workflow, contain
 * CSS PX to REM,
 * Critical CSS,
 * Imagemin,
+* Grunticon,
 * JSHint,
 * Automatic custom Modernizr build,
 * HTMLmin,
@@ -61,5 +62,5 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/fedki
 
 ## Known Issues
 
-* Documentation is in progress,
+* Documentation is TBA,
 * No Windows testing.
