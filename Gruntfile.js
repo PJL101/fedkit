@@ -23,6 +23,9 @@ module.exports = function(grunt) {
         'bower_filtered',
         '<%= site.srcAssets %>/scss/vendor/bower',
         '<%= site.srcAssets %>/js/vendor/bower',
+      ],
+      grunticon: [
+        '_grunticon'
       ]
     },
 
@@ -52,6 +55,22 @@ module.exports = function(grunt) {
           dest: '<%= site.dist %>/'
         }]
       },
+      grunticon: {
+        files: [{
+          expand: true,
+          cwd: '_grunticon/',
+          src: ['**/*', '!*.js', '!*.html'],
+          dest: '<%= site.dist %>/'
+        }]
+      },
+      grunticonjs: {
+        files: [{
+          expand: true,
+          cwd: '_grunticon/',
+          src: ['*.js'],
+          dest: '<%= site.srcAssets %>/js/head/'
+        }]
+      }
     },
 
     // Run shell tasks
@@ -172,6 +191,39 @@ module.exports = function(grunt) {
       },
     },
 
+    // Image minification
+    imagemin: {
+      dynamic: {
+        options: {
+          optimizationLevel: 3,
+          svgoPlugins: [{
+
+          }]
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= site.srcAssets %>/img/',
+          src: ['**/*.{png,jpg,gif,svg}'],
+          dest: '<%= site.distAssets %>/img/'
+        }]
+      }
+    },
+
+    // Grunticon
+    grunticon: {
+      prd: {
+        files: [{
+            expand: true,
+            cwd: '<%= site.distAssets %>/img/icons/',
+            src: ['*.svg', '*.png'],
+            dest: "_grunticon"
+        }],
+        options: {
+          pngfolder: 'assets/img/icon-fallback/'
+        }
+      }
+    },
+
     // JSHint modules
     jshint: {
       options: {
@@ -251,24 +303,6 @@ module.exports = function(grunt) {
           ]
         }
       },
-    },
-
-    // Image minification
-    imagemin: {
-      dynamic: {
-        options: {
-          optimizationLevel: 3,
-          svgoPlugins: [{
-
-          }]
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= site.srcAssets %>/img/',
-          src: ['**/*.{png,jpg,gif,svg}'],
-          dest: '<%= site.distAssets %>/img/'
-        }]
-      }
     },
 
     // HTML minification
@@ -380,10 +414,13 @@ module.exports = function(grunt) {
     'sass:dev',
     'postcss:dev',
     'px_to_rem:dev',
+    'imagemin',
+    'grunticon:prd',
+    'copy:grunticon',
+    'copy:grunticonjs',
     'jshint',
     'modernizr',
     'uglify:dev',
-    'imagemin',
     'copy:fonts',
     'copy:files',
     'critical:dev',
@@ -398,10 +435,13 @@ module.exports = function(grunt) {
     'sass:prd',
     'postcss:prd',
     'px_to_rem:prd',
+    'imagemin',
+    'grunticon:prd',
+    'copy:grunticon',
+    'copy:grunticonjs',
     'jshint',
     'modernizr',
     'uglify:prd',
-    'imagemin',
     'copy:fonts',
     'copy:files',
     'critical:prd',

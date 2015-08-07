@@ -35,6 +35,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-critical": "^0.1.5",
     "grunt-csscomb": "^3.0.1",
+    "grunt-grunticon": "^2.2.1",
     "grunt-modernizr": "^0.6.0",
     "grunt-newer": "^1.1.1",
     "grunt-notify": "^0.4.1",
