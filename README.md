@@ -1,5 +1,5 @@
 # fedkit
-Version: 0.3.0
+Version: 0.4.0
 
 [![Build Status](https://travis-ci.org/PJL101/fedkit.svg?branch=master)](https://travis-ci.org/PJL101/fedkit)
 [![devDependency Status](https://david-dm.org/PJL101/fedkit/dev-status.svg)](https://david-dm.org/PJL101/fedkit
@@ -62,5 +62,4 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/fedki
 
 ## Known Issues
 
-* Documentation is TBA,
-* No Windows testing.
+* Documentation is TBA.
