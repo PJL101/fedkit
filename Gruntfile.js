@@ -25,7 +25,8 @@ module.exports = function(grunt) {
         '<%= site.srcAssets %>/js/vendor/bower',
       ],
       grunticon: [
-        '_grunticon'
+        '_grunticon',
+        '_tmp-icon'
       ]
     },
 
@@ -193,7 +194,7 @@ module.exports = function(grunt) {
 
     // Image minification
     imagemin: {
-      dynamic: {
+      img: {
         options: {
           optimizationLevel: 3,
           svgoPlugins: [{
@@ -206,6 +207,20 @@ module.exports = function(grunt) {
           src: ['**/*.{png,jpg,gif,svg}'],
           dest: '<%= site.distAssets %>/img/'
         }]
+      },
+      grunticon: {
+        options: {
+          optimizationLevel: 3,
+          svgoPlugins: [{
+
+          }]
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= site.srcAssets %>/icons/',
+          src: ['**/*.{png,svg}'],
+          dest: '_tmp-icon/'
+        }]
       }
     },
 
@@ -214,8 +229,8 @@ module.exports = function(grunt) {
       prd: {
         files: [{
             expand: true,
-            cwd: '<%= site.distAssets %>/img/icons/',
-            src: ['*.svg', '*.png'],
+            cwd: '_tmp-icon/',
+            src: ['**/*.{png,svg}'],
             dest: "_grunticon"
         }],
         options: {
@@ -371,7 +386,11 @@ module.exports = function(grunt) {
       },
       img: {
         files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif,svg}'],
-        tasks: ['newer:imagemin'],
+        tasks: ['newer:imagemin:img'],
+      },
+      grunticon: {
+        files: ['<%= site.srcAssets %>/icons/**/*.{png,svg}'],
+        tasks: ['imagemin:grunticon', 'grunticon'],
       },
       fonts: {
         files: ['<%= site.srcAssets %>/fonts/**/*'],
