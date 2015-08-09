@@ -18,7 +18,7 @@ Thumbs.db
 src/assets/scss/vendor/bower
 src/assets/js/vendor/bower
 npm-debug.log
-_grunticon
+*_grunticon/
 
 # Development #
 ######################
