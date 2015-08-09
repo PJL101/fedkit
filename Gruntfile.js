@@ -50,7 +50,7 @@ module.exports = function(grunt) {
       files: {
         files: [{
           expand: true,
-          cwd: '<%= site.src %>/files/',
+          cwd: '<%= site.srcAssets %>/files/',
           src: ['**/*'],
           dest: '<%= site.dist %>/'
         }]
@@ -378,7 +378,7 @@ module.exports = function(grunt) {
         tasks: ['newer:copy:fonts'],
       },
       files: {
-        files: ['<%= site.src %>/files/**/*'],
+        files: ['<%= site.srcAssets %>/files/**/*'],
         tasks: ['newer:copy:files'],
       },
     },
