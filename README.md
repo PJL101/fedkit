@@ -62,4 +62,5 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/fedki
 
 ## Known Issues
 
+* io.js v3 is unsupported due to node-sass. See [https://github.com/sass/node-sass/issues/1053](https://github.com/sass/node-sass/issues/1053),
 * Documentation is TBA.
