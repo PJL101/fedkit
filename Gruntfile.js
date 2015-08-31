@@ -374,7 +374,7 @@ module.exports = function(grunt) {
       },
       scss: {
         files:['<%= site.srcAssets %>/scss/**/*.scss'],
-        tasks:['csscomb', 'sass:dev', 'postcss:dev', 'px_to_rem:dev', 'critical:dev'],
+        tasks:['csscomb', 'sass:dev', 'postcss:dev', 'px_to_rem:dev'],
       },
       img: {
         files: ['<%= site.srcAssets %>/img/**/*.{png,jpg,gif,svg}'],
@@ -382,7 +382,7 @@ module.exports = function(grunt) {
       },
       grunticon: {
         files: ['<%= site.srcAssets %>/icons/**/*.{png,svg}'],
-        tasks: ['imagemin:grunticon', 'grunticon', 'copy:grunticon'],
+        tasks: ['clean:grunticon', 'imagemin:grunticon', 'grunticon', 'copy:grunticon'],
       },
       fonts: {
         files: ['<%= site.srcAssets %>/fonts/**/*'],
@@ -433,7 +433,6 @@ module.exports = function(grunt) {
     'uglify:dev',
     'copy:fonts',
     'copy:files',
-    'critical:dev',
     'watch'
   ]);
 
