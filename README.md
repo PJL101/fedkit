@@ -37,14 +37,13 @@ Use fedkit as a base and tailor to your specific needs. Comments, suggestions & 
 
 There are several variants of fedkit either in development or available now. They have the base frontend workflow with a site generator included. The current variants are:
 
-* [fedkit-assemble](https://github.com/PJL101/fedkit-assemble) - Good for quick website prototyping,
-* [fedkit-hugo](https://github.com/PJL101/fedkit-hugo) - Designed for a static website, with or without a blog.
+* [fedkit-assemble](https://github.com/PJL101/fedkit-assemble) - Good for quick website prototyping.
 
 ## Install
 
 Download the latest stable release from [GitHub](https://github.com/PJL101/fedkit/releases). Once this has been done:
 
-* Install Node 0.12 or io.js 2.0 (Node 0.10.x is not supported but may work),
+* Install Node 0.12 or io.js 3.0 (Node 0.10 is not supported but may work),
 * run `npm install grunt-cli -g && npm install bower -g && npm install bower-installer -g`,
 * Navigate to the workflow folder in command line terminal,
 * run `npm install`,
@@ -62,5 +61,5 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/fedki
 
 ## Known Issues
 
-* io.js v3 is unsupported due to node-sass. See [https://github.com/sass/node-sass/issues/1053](https://github.com/sass/node-sass/issues/1053),
+* Critical CSS task is only performed on the 'prd' task due to watch issues.
 * Documentation is TBA.
