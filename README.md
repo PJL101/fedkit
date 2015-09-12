@@ -6,7 +6,7 @@ Version: 0.4.3
   #info=devDependencies)
 
 * Author: [Phil Lennon](http://iampjl.co.uk)
-* Source: [github.com/PJL101/fedkit](http://github.com/PJL101/fedkit-legacy)
+* Source: [github.com/PJL101/fedkit-legacy](http://github.com/PJL101/fedkit-legacy)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
 * Email: [enquiry@iampjl.co.uk](mailto:enquiry@iampjl.co.uk)
 
@@ -41,7 +41,7 @@ There are several variants of fedkit either in development or available now. The
 
 
 * [fedkit](https://github.com/PJL101/fedkit) - New frontend kit built on the latest tools. PostCSS & Gulp based.
-* [fedkit-assemble](https://github.com/PJL101/fedkit-assemble-legacy) - Good for quick website prototyping.
+* [fedkit-assemble-legacy](https://github.com/PJL101/fedkit-assemble-legacy) - Good for quick website prototyping.
 
 ## Install
 
