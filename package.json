@@ -1,21 +1,20 @@
 {
-  "name": "fedkit",
+  "name": "fedkit-legacy",
   "description": "A fast and stable Front End Development workflow. Built with Grunt & Libsass.",
   "version": "0.4.3",
   "private": "true",
   "author": "Phil Lennon <enquiry@iampjl.co.uk>",
-  "homepage": "https://github.com/PJL101/fedkit",
+  "homepage": "https://github.com/PJL101/fedkit-legacy",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PJL101/fedkit.git"
+    "url": "https://github.com/PJL101/fedkit-legacy.git"
   },
   "bugs": {
-    "url": "https://github.com/PJL101/fedkit/issues"
+    "url": "https://github.com/PJL101/fedkit-legacy/issues"
   },
   "engines": {
-    "node": ">= 0.12",
-    "iojs": ">= 3"
+    "node": ">= 0.12"
   },
   "scripts": {
     "test": "grunt prd"
