@@ -1,5 +1,5 @@
 # fedkit-legacy
-Version: 0.4.3
+Version: 1.0.0
 
 [![Build Status](https://travis-ci.org/PJL101/fedkit-legacy.svg?branch=master)](https://travis-ci.org/PJL101/fedkit-legacy)
 [![devDependency Status](https://david-dm.org/PJL101/fedkit-legacy/dev-status.svg)](https://david-dm.org/PJL101/fedkit-legacy
