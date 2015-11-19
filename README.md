@@ -9,9 +9,11 @@ Version: 1.0.1
 * Source: [github.com/PJL101/fedkit](http://github.com/PJL101/fedkit)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
 * Email: [enquiry@iampjl.co.uk](mailto:enquiry@iampjl.co.uk)
+
 -
 
 **Note:** [Foley](https://github.com/PJL101/foley) is the next version of my Frontend workflow. It uses Gulp, PostCSS, Webpack, Metalsmith, etc. It is highly recommended to use that instead.
+
 -
 
 This kit is designed to go hand in hand with a static site generator but can happily work standalone. See variants for more information.
