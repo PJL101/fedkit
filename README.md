@@ -1,22 +1,24 @@
-# fedkit-legacy
-Version: 1.0.0
+# fedkit
+Version: 1.0.1
 
-[![Build Status](https://travis-ci.org/PJL101/fedkit-legacy.svg?branch=master)](https://travis-ci.org/PJL101/fedkit-legacy)
-[![devDependency Status](https://david-dm.org/PJL101/fedkit-legacy/dev-status.svg)](https://david-dm.org/PJL101/fedkit-legacy
+[![Build Status](https://travis-ci.org/PJL101/fedkit.svg?branch=master)](https://travis-ci.org/PJL101/fedkit)
+[![devDependency Status](https://david-dm.org/PJL101/fedkit/dev-status.svg)](https://david-dm.org/PJL101/fedkit
   #info=devDependencies)
 
 * Author: [Phil Lennon](http://iampjl.co.uk)
-* Source: [github.com/PJL101/fedkit-legacy](http://github.com/PJL101/fedkit-legacy)
+* Source: [github.com/PJL101/fedkit](http://github.com/PJL101/fedkit)
 * Twitter: [@PJL101](http://twitter.com/pjl101)
 * Email: [enquiry@iampjl.co.uk](mailto:enquiry@iampjl.co.uk)
 
 -
 
-## NOTE: Development effort is now going into [fedkit](https://github.com/PJL101/fedkit). However, any critical issues will be addressed if required.
+NOTE: [Foley](https://github.com/PJL101/foley) is the next version of my Frontend workflow using Gulp, PostCSS, Webpack, Metalsmith, etc. It is highly recommended to use that instead.
+
+-
 
 This kit is designed to go hand in hand with a static site generator but can happily work standalone. See variants for more information.
 
-fedkit-legacy is a fast, stable, well tested and opinionated frontend development workflow, containing:
+fedkit is a fast, stable, well tested and opinionated frontend development workflow, containing:
 
 * Grunt 0.4,
 * Libsass 3.2,
@@ -33,19 +35,11 @@ fedkit-legacy is a fast, stable, well tested and opinionated frontend developmen
 * HTMLmin,
 * All frontend dependences use bower for easy management.
 
-Use fedkit-legacy as a base and tailor to your specific needs. Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/PJL101/fedkit-legacy/issues) for more information about future enhancements and changes.
-
-## Variants
-
-There are several variants of fedkit either in development or available now. They have the base frontend workflow with a site generator included. The current variants are:
-
-
-* [fedkit](https://github.com/PJL101/fedkit) - New frontend kit built on the latest tools. PostCSS & Gulp based.
-* [fedkit-assemble-legacy](https://github.com/PJL101/fedkit-assemble-legacy) - Good for quick website prototyping.
+Use fedkit as a base and tailor to your specific needs. Comments, suggestions & pull requests are always welcome. See the [issues list](https://github.com/PJL101/fedkit/issues) for more information about future enhancements and changes.
 
 ## Install
 
-Download the latest stable release from [GitHub](https://github.com/PJL101/fedkit-legacy/releases). Once this has been done:
+Download the latest stable release from [GitHub](https://github.com/PJL101/fedkit/releases). Once this has been done:
 
 * Install Node 0.12 or above (Node 0.10 is not supported but may work),
 * run `npm install grunt-cli -g && npm install bower -g && npm install bower-installer -g`,
@@ -65,4 +59,4 @@ Download the latest stable release from [GitHub](https://github.com/PJL101/fedki
 
 ## Known Issues
 
-* Critical CSS task is only performed on the 'prd' task due to watch issues.
+* Critical inline CSS task is only performed on the 'prd' task due to watch issues.
